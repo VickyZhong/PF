@@ -6,22 +6,22 @@ import java.util.Scanner;
 
 public class Game {
 		Random random = new Random();
-		int ROW = 4;// 4X4 grid rows
-		int COLUMN = 4;// 4X4 grid columns
+		private int ROW = 4;// 4X4 grid rows
+		private int COLUMN = 4;// 4X4 grid columns
 		private GameItem[][] board = new GameItem[ROW][COLUMN];// grid array
-		int numPit = 3; // the number of pit;
-		int numWumpus = 1;// the number of Wumpus
-		int numGold = random.nextInt(3) + 1;// the number of gold
-		int numClear = ((ROW) * (COLUMN)) - 1 - numPit - numWumpus - numGold; // the number of clear ground
-		public int iPosition = 0;// player initially position
-		public int jPosition = 0;
-		char itemLook;
-		int upItem; //
-		int downItem; // row coordination after moving down
-		int leftItem; // column coordination after moving left
-		int rightItem;// column coordination after moving right
-		int choicePosition; // choose to move player up or down or left or right
-		static int score;
+		private int numPit = 3; // the number of pit;
+		private int numWumpus = 1;// the number of Wumpus
+		private int numGold = random.nextInt(3) + 1;// the number of gold
+		private int numClear = ((ROW) * (COLUMN)) - 1 - numPit - numWumpus - numGold; // the number of clear ground
+		private int iPosition = 0;// player initially position
+		private int jPosition = 0;
+		private char itemLook;
+		private int upItem; //
+		private int downItem; // row coordination after moving down
+		private int leftItem; // column coordination after moving left
+		private int rightItem;// column coordination after moving right
+		private int choicePosition; // choose to move player up or down or left or right
+		private static int score;
 		Gold gold = new Gold(itemLook);
 		Pit pit = new Pit(itemLook);
 		Wumpus wumpus = new Wumpus(itemLook);
