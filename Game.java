@@ -126,7 +126,9 @@ public class Game {
 			System.out.println("-----------BE CAREFUL------------");
 		
 		        if (board[upItem][j].getShowLook()==c && board[downItem][j].getShowLook()==c 
-					&& board[i][leftItem].getShowLook()==c && board[i][rightItem].getShowLook()==c) 
+					&& board[i][leftItem].getShowLook()==c && board[i][rightItem].getShowLook()==c) {
+				System.out.println("Clear Nearby");
+			}
 				
 			if (board[upItem][j].getShowLook() == p) {
 				System.out.println("A Breeze");
