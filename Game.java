@@ -122,7 +122,12 @@ public class Game {
 			char g = gold.display();
 			char w = wumpus.display();
 			char c = clearground.display();
+		
 			System.out.println("-----------BE CAREFUL------------");
+		
+		        if (board[upItem][j].getShowLook()==c && board[downItem][j].getShowLook()==c 
+					&& board[i][leftItem].getShowLook()==c && board[i][rightItem].getShowLook()==c) 
+				
 			if (board[upItem][j].getShowLook() == p) {
 				System.out.println("A Breeze");
 			}
